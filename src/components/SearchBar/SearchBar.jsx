@@ -8,14 +8,17 @@ import SearchIcon from '@mui/icons-material/Search';
 import CustomButton from '../CustomButton/CustomButton';
 import './SearchBar.css';
 
+// Search component with input field and filter/clear buttons
 function SearchBar({ onSearch, buttonSx }) {
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Handles search form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(searchTerm);
   };
 
+  // Clears the search term and resets search results
   const handleClear = () => {
     setSearchTerm('');
     onSearch(''); // Clear filter results

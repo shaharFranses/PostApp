@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import './CustomButton.css';
 
+// Custom button wrapper with consistent styling across the application
 function CustomButton({ children, onClick, type = 'button', variant = 'contained', color = 'primary', startIcon, ...rest }) {
   return (
     <Button

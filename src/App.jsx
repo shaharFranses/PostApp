@@ -4,6 +4,7 @@ import MainPage from './components/MainPage/MainPage';
 import SinglePostPage from './components/SinglePostPage/SinglePostPage';
 import './App.css';
 
+// Main application component that handles routing between pages
 function App() {
   return (
     <div className="App">

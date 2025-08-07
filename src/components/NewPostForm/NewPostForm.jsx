@@ -5,6 +5,7 @@ import axios from 'axios';
 import CustomButton from '../CustomButton/CustomButton';
 import './NewPostForm.css';
 
+// Form component for creating new posts with title and body fields
 function NewPostForm({ onSubmit, onCancel, cardSx }) {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
@@ -12,6 +13,7 @@ function NewPostForm({ onSubmit, onCancel, cardSx }) {
   const [loading, setLoading] = useState(false);
   const [posted, setPosted] = useState(false);
 
+  // Handles form submission and API communication
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!title.trim() || !body.trim()) {
@@ -59,6 +61,7 @@ function NewPostForm({ onSubmit, onCancel, cardSx }) {
     }
   };
 
+  // Handles form cancellation and resets all states
   const handleCancel = () => {
     setTitle('');
     setBody('');
