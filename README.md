@@ -19,7 +19,7 @@ A React application that fetches data from JSONPlaceholder API and implements CR
 - Material-UI (MUI)
 - React Router
 - Axios
-- CSS3
+
 
 ## Installation
 
