@@ -1,0 +1,42 @@
+.search-bar-container {
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: none;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar-container:hover {
+  box-shadow: none;
+}
+
+.search-bar-container .MuiTextField-root .MuiOutlinedInput-root {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--white);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.search-bar-container .MuiTextField-root .MuiOutlinedInput-root:hover {
+  border-color: var(--blue-light);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.search-bar-container .MuiTextField-root .MuiOutlinedInput-root.Mui-focused {
+  border-color: var(--blue);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.search-bar-container .MuiInputAdornment-root {
+  color: var(--gray);
+}
+
+.search-bar-container .MuiButton-root {
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: none;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

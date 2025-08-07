@@ -106,7 +106,7 @@ function NewPostForm({ onSubmit, onCancel, cardSx }) {
           fullWidth
           margin="normal"
           multiline
-          minRows={1}
+          minRows={0}
           disabled={loading}
         />
         

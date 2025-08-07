@@ -3,10 +3,54 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .post-card:hover {
-  box-shadow: 6;
-  transform: translateY(-2px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  border-color: var(--blue-light);
+}
+
+.post-card:hover::before {
+  transform: scaleX(1);
+}
+
+.post-card .MuiCardContent-root {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card h2 {
+  color: var(--black);
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.post-card p {
+  color: var(--gray);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
 }

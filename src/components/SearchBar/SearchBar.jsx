@@ -22,7 +22,7 @@ function SearchBar({ onSearch, buttonSx }) {
   };
 
   return (
-    <Box component="form" onSubmit={handleSubmit} sx={{ mb: 3, height: 56, display: 'flex', alignItems: 'flex-end' }}>
+    <Box component="form" onSubmit={handleSubmit} sx={{ mb: 3, height: 56, display: 'flex', alignItems: 'flex-end' }} className="search-bar-container">
       <Box sx={{ display: 'flex', gap: 2, width: '100%' }}>
         <TextField
           fullWidth

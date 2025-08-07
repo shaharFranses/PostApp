@@ -1,18 +1,42 @@
 .new-post-form {
   /* Remove all margin, padding, and width constraints */
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+  position: relative;
 }
 
 .new-post-form form {
   display: flex;
   flex-direction: column;
+  padding: 32px;
 }
 
 .new-post-form .MuiTextField-root {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.new-post-form .MuiTextField-root .MuiOutlinedInput-root {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.new-post-form .MuiTextField-root .MuiOutlinedInput-root:hover {
+  border-color: var(--blue-light);
+}
+
+.new-post-form .MuiTextField-root .MuiOutlinedInput-root.Mui-focused {
+  border-color: var(--blue);
 }
 
 .new-post-form .MuiButton-root {
-  min-width: 100px;
+  min-width: 120px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: none;
+  transition: all 0.3s ease;
 }
 
 /* Make the body textarea auto-expand */
@@ -21,4 +45,5 @@
   max-height: 400px;
   resize: vertical;
   overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

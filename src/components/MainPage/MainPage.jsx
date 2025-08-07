@@ -27,22 +27,22 @@ function MainPage() {
   const navigate = useNavigate();
 
   // Simple wait function
-  const wait = (seconds) => {
-    return new Promise(resolve => setTimeout(resolve, seconds * 1000));
-  };
+ 
 
   useEffect(() => {
     fetchPosts();
   }, []);
 
+
+
+  //The function fetches the posts from the API and sets the posts and filtered posts states
+  //and sets the loading state to true and false. based on the response, it sets the error state to the error message.
   const fetchPosts = async () => {
     try {
       setLoading(true);
-      // Wait for 3 seconds
-      await wait(3);
       const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
       setPosts(response.data);
-      setFilteredPosts(response.data); // Initialize filtered posts with all posts
+      setFilteredPosts(response.data); 
     } catch (err) {
       let errorMessage;
       if (err.response?.status && err.response?.data?.message) {
@@ -59,6 +59,9 @@ function MainPage() {
     }
   };
 
+
+  //The function filters the posts based on the search term and sets the filtered posts state.
+  //if the search term is empty, it shows all posts.
   const handleSearch = (searchTerm) => {
     if (searchTerm.trim() === '') {
       setFilteredPosts(posts); // Show all posts if search is empty
@@ -70,15 +73,20 @@ function MainPage() {
     }
   };
 
+  //The function navigates to the single post page and passes the post data to the page.
   const handlePostClick = (postId) => {
     const postData = posts.find(post => post.id === parseInt(postId));
     navigate(`/post/${postId}`, { state: { post: postData } });
   };
 
+  //The function toggles the new post form and sets the show new post form state to the opposite of the current state.
   const handleAddPost = () => {
     setShowNewPostForm((prev) => !prev);
   };
 
+  //The function adds the new post to the local state and sets the filtered posts state to the new post.
+  //and sets the show new post form state to false.
+  //and shows a success notification.
   const handleNewPostSubmit = (newPost) => {
     // Add the new post to the local state
     const updatedPosts = [newPost, ...posts];
@@ -92,10 +100,6 @@ function MainPage() {
       message: 'Post created successfully!',
       severity: 'success'
     });
-  };
-
-  const handleNewPostCancel = () => {
-    setShowNewPostForm(false);
   };
 
   const handleCloseNotification = () => {
@@ -171,7 +175,7 @@ function MainPage() {
         </Grid>
         {showNewPostForm && (
           <Grid item sx={{ width: '100%' }}>
-            <NewPostForm onSubmit={handleNewPostSubmit} onCancel={handleNewPostCancel} cardSx={{
+            <NewPostForm onSubmit={handleNewPostSubmit} onCancel={handleAddPost} cardSx={{
               width: '100%',
               mb: 3,
               borderRadius: 3,
@@ -203,7 +207,10 @@ function MainPage() {
                 </Grid>
               ))}
             </Grid>
-          ) : (
+          ) : 
+          //if the filtered posts are empty, it shows a message saying no posts found.
+          //and a message saying to try adjusting the search terms or browse all posts.
+          (
             <Box sx={{ textAlign: 'center', py: 4 }}>
               <Typography variant="h6" color="text.secondary" gutterBottom>
                 No posts found

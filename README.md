@@ -4,14 +4,14 @@ A React application that fetches data from JSONPlaceholder API and implements CR
 
 ## Features
 
-- ✅ **Display Posts**: Fetch and display posts in a responsive card layout
-- ✅ **View Post Details**: Click on posts to view details with comments
-- ✅ **Search/Filter**: Filter posts by title with real-time search
-- ✅ **Add New Post**: Create new posts with title and body
-- ✅ **Responsive Design**: Works on desktop and mobile
-- ✅ **Loading States**: Professional loading indicators
-- ✅ **Error Handling**: Graceful error display
-- ✅ **Modern UI**: Material-UI components with custom styling
+**Display Posts**: Fetch and display posts in a responsive card layout
+ **View Post Details**: Click on posts to view details with comments
+ **Search/Filter**: Filter posts by title with real-time search
+ **Add New Post**: Create new posts with title and body
+ **Responsive Design**: Works on desktop and mobile
+ **Loading States**: Professional loading indicators
+ **Error Handling**: Graceful error display
+ **Modern UI**: Material-UI components with custom styling
 
 ## Technologies Used
 
@@ -83,7 +83,6 @@ src/
 ### Single Post Page
 - Shows full post details
 - Displays all comments for the post
-- Hybrid approach: uses passed data if available, fetches if not
 - Back navigation to main page
 
 ### Search Functionality
@@ -93,21 +92,12 @@ src/
 
 ### Add New Post
 - Inline form that appears on main page
-- API integration with JSONPlaceholder
 - Success feedback with green button state
 - Form validation and error handling
 
-## Additional Notes
 
-- Uses React functional components with hooks
-- Implements React Router for navigation
-- Follows Material Design principles
-- Responsive design for all screen sizes
-- Clean, modular component architecture
-- Consistent button styling with custom component
 
 ## Available Scripts
-
 - `npm start` - Runs the app in development mode
 - `npm build` - Builds the app for production
-- `npm test` - Launches the test runner
+
