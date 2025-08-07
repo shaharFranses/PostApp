@@ -1,0 +1,21 @@
+.custom-button {
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: none !important;
+  margin: 0 8px 8px 0;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.custom-button:active {
+  box-shadow: none;
+}
+
+.custom-button.MuiButton-containedPrimary {
+  background-color: #1976d2;
+}
+
+.custom-button.MuiButton-outlinedPrimary {
+  border-color: #1976d2;
+  color: #1976d2;
+}
