@@ -86,7 +86,6 @@ src/
 - Back navigation to main page
 
 ### Search Functionality
-- Real-time filtering of posts by title
 - Client-side search for fast performance
 - "No posts found" message when no results
 
